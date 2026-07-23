@@ -16,8 +16,8 @@ jobs:
       - name: Generate Telemetry Metrics
         uses: lowlighter/metrics@master
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: bipladipsaha
+          token: ${{ secrets.GH_TOKEN }}
+          user: AaineeSinha
           filename: assets/github-metrics.svg
           template: terminal
           base: header, activity, community, repositories, metadata
