@@ -25,7 +25,6 @@ jobs:
 
           config_timezone: Asia/Kolkata
 
-          config_timezone: Asia/Kolkata
 
           plugin_activity: yes
           plugin_activity_limit: 10
