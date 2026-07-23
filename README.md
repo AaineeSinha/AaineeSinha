@@ -14,7 +14,10 @@
 
 Computer Science undergraduate specializing in Artificial Intelligence with experience in Machine Learning, Large Language Models (LLMs), and Retrieval-Augmented Generation (RAG). Passionate about AI, cybersecurity, and intelligent automation with hands-on experience developing document intelligence platforms and cyber threat analysis tools.
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03.svg"/><img src="assets/s03.svg" alt="02 — stack"/></picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark/s03.svg"/>
+  <img src="assets/s03.svg" alt="03 — stack"/>
+</picture>
 
 ### Technical Stack
 
@@ -26,7 +29,10 @@ Computer Science undergraduate specializing in Artificial Intelligence with expe
 
 * **Concepts:** Cyber Threat Intelligence, Vector Databases, AI Fundamentals, Cybersecurity Fundamentals
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/s06.svg"/><img src="assets/s06.svg" alt="03 — projects"/></picture>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/dark/s06.svg"/>
+  <img src="assets/s06.svg" alt="02 — projects"/>
+</picture>
 
 ### Projects
 
