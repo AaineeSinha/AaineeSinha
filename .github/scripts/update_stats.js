@@ -70,13 +70,11 @@ async function updateStats() {
         const user = await fetchREST(`/users/${username}`);
         const repos = await fetchREST(`/users/${username}/repos?per_page=100`);
 
-        const prs = await fetchREST(
-        `/search/issues?q=author:${username}+type:pr`
-        );
+        const totalPRs = prs.total_count || 0;
+        console.log("PR total_count =", prs.total_count);
 
-        const issues = await fetchREST(
-        `/search/issues?q=author:${username}+type:issue`
-    );
+        const totalIssues = issues.total_count || 0;
+        console.log("Issue total_count =", issues.total_count);
 
         const query = `
             query {
