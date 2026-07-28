@@ -70,11 +70,19 @@ async function updateStats() {
         const user = await fetchREST(`/users/${username}`);
         const repos = await fetchREST(`/users/${username}/repos?per_page=100`);
 
-        const totalPRs = prs.total_count || 0;
-        console.log("PR total_count =", prs.total_count);
+        const prs = await fetchREST(
+        `/search/issues?q=author:${username}+type:pr`
+        );
 
-        const totalIssues = issues.total_count || 0;
+        const issues = await fetchREST(
+        `/search/issues?q=author:${username}+type:issue`
+        );
+
+        console.log("PR total_count =", prs.total_count);
         console.log("Issue total_count =", issues.total_count);
+
+        const totalPRs = prs.total_count || 0;
+        const totalIssues = issues.total_count || 0;
 
         const query = `
             query {
@@ -103,10 +111,6 @@ const gqlData = await fetchGraphQL(query);
 
         const totalCommits =
         gqlData?.data?.user?.contributionsCollection?.contributionCalendar?.totalContributions || 0;
-
-        const totalPRs = prs.total_count || 0;
-
-        const totalIssues = issues.total_count || 0;
 
         const contributedTo =
         gqlData?.data?.user?.repositoriesContributedTo?.totalCount || 0;
